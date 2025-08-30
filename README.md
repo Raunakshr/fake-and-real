@@ -32,3 +32,26 @@ python manage.py runserver
 ## Notes
 
 The project is under active development. Many components are placeholders and require further implementation.
+
+## Documentation
+
+### Prerequisites
+
+Building the dissertation PDF requires a LaTeX distribution such as [TeX Live](https://www.tug.org/texlive/).
+
+### Building the PDF
+
+```bash
+cd docs
+pdflatex dissertation.tex
+bibtex dissertation
+pdflatex dissertation.tex
+pdflatex dissertation.tex
+```
+
+To automate the build, run:
+
+```bash
+cd docs
+make
+```
