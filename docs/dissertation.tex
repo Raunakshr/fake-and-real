@@ -1,0 +1,58 @@
+\documentclass{report}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\title{Fake News Detection using NLP and Deep Learning}
+\author{Research Team}
+\date{\today}
+\begin{document}
+\maketitle
+\begin{abstract}
+This dissertation explores automatic detection of misinformation on the web.
+We combine classical natural language processing with recent deep-learning
+approaches to build a robust classifier for news articles.  The study describes
+the dataset, modelling choices and the accompanying prototype application.
+\end{abstract}
+\tableofcontents
+
+\chapter{Introduction}
+The proliferation of unverified information on social media platforms has
+raised significant concerns for policy makers and the general public.  This
+chapter outlines the motivation for automated fake news detection and
+summarises the objectives of the project, namely to evaluate a range of models
+and deliver a lightweight web demonstration.
+
+\chapter{Literature Review}
+Research on misinformation spans linguistic features, network analysis and
+machine learning.  Early approaches relied on handcrafted cues, whereas recent
+work employs transformers such as BERT that learn context directly from data.
+We review the strengths and limitations of these techniques and highlight open
+challenges regarding bias and domain transfer.
+
+\chapter{Methodology}
+Our methodology begins with cleaning and normalising the news text before
+extracting features.  Classical models use TF--IDF vectors with logistic
+regression and tree ensembles, while the deep track experiments with recurrent
+neural networks.  Training and validation procedures follow a stratified split
+of the provided dataset.
+
+\chapter{Experiments}
+Experiments compare baseline classifiers against the proposed models.  We report
+metrics such as accuracy and macro--F1 and include a brief error analysis.  The
+results demonstrate that even simple models provide competitive performance on
+this dataset, while deep networks require more resources but offer marginal
+improvements.
+
+\chapter{Discussion}
+The discussion interprets the empirical findings and considers practical
+implications.  We address limitations including dataset biases and the rapidly
+changing nature of online discourse, arguing for continuous model updates and
+human oversight.
+
+\chapter{Conclusion}
+We present a compact yet extensible framework for fake news detection that
+integrates data processing, modelling and a demonstration interface.  Future
+work will expand the training data and explore multilingual settings.
+
+\bibliographystyle{plain}
+\bibliography{refs}
+\end{document}
