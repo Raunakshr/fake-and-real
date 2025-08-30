@@ -1,5 +1,6 @@
 """Evaluation script for fake news detection models.
 
+
 This utility loads a saved pipeline and reports standard classification
 metrics on the held‑out test set derived from the repository datasets.
 """
@@ -46,4 +47,21 @@ def main() -> None:
 
 
 if __name__ == "__main__":
+
+TODO: Implement evaluation routine.
+"""
+
+import argparse
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Evaluate saved models")
+    parser.add_argument('--model-path', type=str, default='../models/classical_best.pkl')
+    args = parser.parse_args()
+    # TODO: Add evaluation logic
+    print(f"Evaluating model at {args.model_path} - TODO")
+
+
+if __name__ == '__main__':
+
     main()

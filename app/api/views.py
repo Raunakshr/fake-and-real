@@ -1,3 +1,4 @@
+
 """API views for prediction endpoints."""
 
 from __future__ import annotations
@@ -38,3 +39,12 @@ def predict(request):
     idx = int(proba.argmax())
     label = LABELS.get(idx, str(idx))
     return JsonResponse({"label": label, "proba": float(proba[idx])})
+=======
+from django.http import JsonResponse
+
+
+def predict(request):
+    # TODO: Implement prediction logic
+    data = {'label': 'TODO', 'proba': 0.0}
+    return JsonResponse(data)
+
