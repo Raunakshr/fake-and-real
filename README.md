@@ -1,6 +1,11 @@
 # Fake News NLP Project
 
+
+This repository contains an end-to-end fake news detection project using NLP
+and deep learning techniques.
+
 This repository contains scaffolding for a fake news detection project using NLP and deep learning techniques.
+main
 
 ## Structure
 
@@ -8,7 +13,11 @@ This repository contains scaffolding for a fake news detection project using NLP
  data/               # datasets (read-only)
  notebooks/          # Jupyter notebooks
  models/             # saved models and artifacts
+ codex/initiate-fake-news-detection-project-k315gm
+ app/                # Django prototype
+
  app/                # Django prototype (placeholder)
+ main
  docs/               # dissertation and figures
  scripts/            # training and evaluation scripts
 ```
@@ -21,6 +30,23 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
+
+## Training
+
+Classical model training and evaluation:
+
+```bash
+python scripts/train.py --model classical
+python scripts/evaluate.py
+```
+
+To train the example deep model instead, pass ``--model deep`` to
+``train.py``.
+
+## Django Prototype
+
+After training and exporting the pipeline, run the web demo:
+
 ## Django Prototype
 
 ```bash
@@ -29,6 +55,11 @@ python manage.py migrate
 python manage.py runserver
 ```
 
+
+The root page provides a simple form, while ``/api/predict`` accepts JSON
+payloads of the form ``{"text": "..."}``.
+
 ## Notes
 
 The project is under active development. Many components are placeholders and require further implementation.
+
